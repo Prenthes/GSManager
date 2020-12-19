@@ -4,7 +4,7 @@ This projet is a personnal school project. The goal is to find the best way to d
 
 ## CHANGELOG
 
-*   V0.1 : Pseudo Script writted & testing github fonctionnality
+*   V0.1 : Pseudo Script writted & testing github fonction
 
 ## Usage
 
