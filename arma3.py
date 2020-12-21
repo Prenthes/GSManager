@@ -37,3 +37,7 @@ try:
     s.app_update(233780,os.path.join(os.getcwd(),gameserver_path),validate=True)
 except:
     print('Arma3Server déjà installé')
+
+# Lancement serveur de jeu ARMA
+
+
