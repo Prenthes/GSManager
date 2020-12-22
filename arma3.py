@@ -1,9 +1,6 @@
 import os
+import subprocess
 from pysteamcmdwrapper import SteamCMD
-
-#programmer script pour checker si pysteamcmd est installé
-    #oui print pysteamcmd est installé pass
-    #non installer via pip install pysteamcmd
 
 # Création du repertoire steamCMD 
 try:
@@ -39,5 +36,6 @@ except:
     print('Arma3Server déjà installé')
 
 # Lancement serveur de jeu ARMA
-
-
+root = os.getcwd()
+abs_path = os.path.join(root,"arma_server","arma3server.exe")
+subprocess.Popen([abs_path])

@@ -2,14 +2,15 @@
 
 This projet is a personnal school project. The goal is to find the best way to deploy a Steam Server with some games on it.
 
-## CHANGELOG CURRENT 0.2
-
-*   V0.2 : Now working with Py-SteamCMD-Wrapper / Implementing steamCMD / making test on dir management with python / addind list of game + steam ID for further experiments
-*   V0.1 : Pseudo Script writted & testing github fonction
-
 ## Usage
 
-* to be documented
+* Simply launch arma3.py to autoinstall and start arma3server
+
+## CHANGELOG CURRENT 0.3
+
+*   V0.3 : Script now install and launch the arma3server
+*   V0.2 : Now working with Py-SteamCMD-Wrapper / Implementing steamCMD / making test on dir management with python / addind list of game + steam ID for further experiments
+*   V0.1 : Pseudo Script writted & testing github fonction
 
 
 ## License
