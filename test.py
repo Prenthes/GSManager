@@ -1,16 +1,15 @@
-import requests
+import os
+import sys
+import subprocess
 import yaml
-from bs4 import BeautifulSoup
+import shutil
+import wget
+from pysteamcmdwrapper import SteamCMD
 
-yaml_conf_file = open("conf.yml", 'r')
-yaml_conf_content = yaml.load(yaml_conf_file)
+###########################################
+# VARS
+###########################################
 
-print (yaml_conf_content['game']['game_name'])
+import sys
 
-mods = yaml_conf_content['game']['game_mod']
-
-for mod in mods:
- print(mod)
-
-installdir = yaml_conf_content['steamCMD']['name']
-print(installdir)
+print (sys.argv[1])

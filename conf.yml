@@ -1,18 +1,17 @@
 steamCMD:
       steamCMD_dir: steamcmd
       login: prentheserver
-      password: mdpTEST1234!
+      password: 
 game:
       game_id: 233780
-      game_name: Arma 3 Server
       game_dir: arma_server
-      game_mod:
-        - mod1
-        - mod2
-        - mod3
-      game_map:
-        - map1
-        - map2
-        - map3
+      game_mods:
+        cba3: 450814997
+        task_force_radio: 620019431        
+      game_maps:
+        - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-Altis-2-3-2.Altis.pbo
+        - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-WotP-2-3-2.Tanoa.pbo
+
+
 
       

@@ -1,13 +1,17 @@
-# Open Class Room Projet 6 Developpement page
+# ARMA 3 Antistasi Server Python Installer
 
 This projet is a personnal school project. The goal is to find the best way to deploy a Steam Server with some games on it.
 
 ## Usage
 
-* Simply launch arma3.py to autoinstall and start arma3server
+* check conf.yaml to configure your stuff
+* python arma3.py install // for installing server, map and mod
+* python arma3.py uninstall // to uninstall the server
+* python arma3.py start // to start the server
 
-## CHANGELOG CURRENT 0.4
+## CHANGELOG CURRENT 0.5
 
+*   V0.5 : Reorganising code, implementing map downloading, renaming project
 *   V0.4 : Reorganising code, implementing YAML conf file, adding uninstall function
 *   V0.3 : Script now install and launch the arma3server
 *   V0.2 : Now working with Py-SteamCMD-Wrapper / Implementing steamCMD / making test on dir management with python / addind list of game + steam ID for further experiments
