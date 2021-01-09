@@ -9,8 +9,9 @@ This projet is a personnal school project. The goal is to find the best way to d
 * python arma3.py uninstall // to uninstall the server
 * python arma3.py start // to start the server
 
-## CHANGELOG CURRENT 0.5
+## CHANGELOG CURRENT 0.6
 
+*   V0.6 : Implementing mod installation, conf.cfg auto generation
 *   V0.5 : Reorganising code, implementing map downloading, renaming project
 *   V0.4 : Reorganising code, implementing YAML conf file, adding uninstall function
 *   V0.3 : Script now install and launch the arma3server

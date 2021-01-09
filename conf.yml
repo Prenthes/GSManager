@@ -1,6 +1,6 @@
 steamCMD:
       steamCMD_dir: steamcmd
-      login: prentheserver
+      login: 
       password: 
 game:
       game_id: 233780
@@ -12,6 +12,23 @@ game:
         - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-Altis-2-3-2.Altis.pbo
         - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-WotP-2-3-2.Tanoa.pbo
 
+conf:
+      hostname: "Antistasi Server"
+      password: test
+      passwordAdmin: password
+      logfile: log.log
+      maxPlayers: 10
+      kickduplicate: 1
+      verifySignatures: 0
+      allowedFilePatching: 0
+      requiredSecureId: 0
+      voteMissionPlayers: 3
+      voteThreshold: 0.33
+      disableVoN: 0
+      vonCodecQuality: 10
+      persistent: 1
+      timeStampFormat: "none"
+      BattlEye: 0
 
-
-      
+map:
+      selected: Antistasi-Altis-2-3-2.Altis
