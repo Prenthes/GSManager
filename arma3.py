@@ -8,6 +8,7 @@ from pysteamcmdwrapper import SteamCMD
 from inc.install import install
 from inc.start import start
 from inc.uninstall import uninstall
+from inc.stop import stop
 
 ###########################################
 # VARS
@@ -56,5 +57,7 @@ elif function == "uninstall":
     uninstall()
 elif function == "start":
     start()
+elif function == "stop":
+    stop()
 else:
     print('Function unavalable, check documentation for further notice')

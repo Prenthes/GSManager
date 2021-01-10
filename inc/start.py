@@ -11,6 +11,17 @@ SERVER_DIR = yaml_conf_content['game']['game_dir']
 
 def start():
     # LAUNCHING GAME
-    root = os.getcwd()
-    abs_path = os.path.join(root,SERVER_DIR,"arma3server.exe")
-    subprocess.Popen([abs_path])
+    root = str(os.getcwd())
+    PORT = str(yaml_conf_content['game']['game_firewall'])
+    CONF = str("-config=conf.cfg")
+    MODS = yaml_conf_content['game']['game_mods']
+    MODLIST = ["-mod="]
+    for mod in MODS:
+       mod = "@" + mod + ";"
+       MODLIST.append(mod)
+    MODLIST = ''.join(MODLIST)
+    APP = "arma3server.exe"
+    APP_LAUNCH = str(os.path.join(root,SERVER_DIR,str(APP)))
+    START_CMD = (" -port=", PORT,' "-config=',CONF,'"',' "',"-mod=",MODLIST,'"')
+    JOIN_START_CMD = ''.join(START_CMD)
+    subprocess.run([APP_LAUNCH,CONF, MODLIST])

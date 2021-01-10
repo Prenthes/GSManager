@@ -4,7 +4,6 @@ import yaml
 import shutil
 import wget
 from pysteamcmdwrapper import SteamCMD
-from bs4 import BeautifulSoup
 
 yaml_conf_file = open("conf.yml", 'r')
 yaml_conf_content = yaml.safe_load(yaml_conf_file)

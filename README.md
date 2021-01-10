@@ -8,9 +8,11 @@ This projet is a personnal school project. The goal is to find the best way to d
 * python arma3.py install // for installing server, map and mod
 * python arma3.py uninstall // to uninstall the server
 * python arma3.py start // to start the server
+* python arma3.py stop // to stop the server
 
-## CHANGELOG CURRENT 0.6
+## CHANGELOG CURRENT 0.7
 
+*   V0.7 : Implementing custom start, stop function
 *   V0.6 : Implementing mod installation, conf.cfg auto generation
 *   V0.5 : Reorganising code, implementing map downloading, renaming project
 *   V0.4 : Reorganising code, implementing YAML conf file, adding uninstall function
