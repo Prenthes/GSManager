@@ -1,22 +1,29 @@
 import os
+import sys
 import subprocess
 import yaml
 import shutil
 import wget
 from pysteamcmdwrapper import SteamCMD
-
-yaml_conf_file = open("conf.yml", 'r')
-yaml_conf_content = yaml.safe_load(yaml_conf_file)
-LOGIN = yaml_conf_content['steamCMD']['login']
-PWD = yaml_conf_content['steamCMD']['password']
-SERVER_DIR = yaml_conf_content['game']['game_dir']
-WORKSHOP_DIR = os.path.join(os.getcwd(),SERVER_DIR,"armamods","steamapps","workshop","content","107410")
-MOD_DIR = os.path.join(os.getcwd(),SERVER_DIR)
-GAME_ID = yaml_conf_content['game']['game_id']
-STEAMCMD_DIR = yaml_conf_content['steamCMD']['steamCMD_dir']
+from inc.sys_check import req_check
 
 def install():
-     #DOWNLOAD AND INSTALL GAME
+    
+    yaml_conf_file = open(sys.argv[2], 'r')
+    yaml_conf_content = yaml.safe_load(yaml_conf_file)
+
+    LOGIN = yaml_conf_content['steamCMD']['login']
+    PWD = yaml_conf_content['steamCMD']['password']
+    SERVER_DIR = yaml_conf_content['game']['game_dir']
+    WORKSHOP_DIR = os.path.join(os.getcwd(),SERVER_DIR,"armamods","steamapps","workshop","content","107410")
+    MOD_DIR = os.path.join(os.getcwd(),SERVER_DIR)
+    GAME_ID = yaml_conf_content['game']['game_id']
+    STEAMCMD_DIR = yaml_conf_content['steamCMD']['steamCMD_dir']
+
+    #SYSTEM CHECK
+    req_check()
+
+    #DOWNLOAD AND INSTALL GAME
     try:
         s = SteamCMD(STEAMCMD_DIR)
         s.login(LOGIN, PWD)

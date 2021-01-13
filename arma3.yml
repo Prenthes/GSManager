@@ -1,7 +1,7 @@
 steamCMD:
       steamCMD_dir: steamcmd
-      login: Prenthes
-      password: 36998510
+      login: 
+      password: 
 game:
       game_id: 233780
       game_dir: arma_server
@@ -12,6 +12,11 @@ game:
       game_maps:
         - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-Altis-2-3-2.Altis.pbo
         - https://github.com/official-antistasi-community/A3-Antistasi/releases/download/2.3.2/Antistasi-WotP-2-3-2.Tanoa.pbo
+
+requirements:
+      RAM: 2
+      HDD: 32
+      CORE: 2
 
 conf:
       hostname: "Antistasi Server"

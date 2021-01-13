@@ -1,2 +1,4 @@
-pysteamcmd
-yaml
+py-steamcmd-wrapper
+pyYAML
+requests
+psutil

@@ -1,17 +1,19 @@
-# ARMA 3 Antistasi Server Python Installer
+# Game Server Manager Python
 
-This projet is a personnal school project. The goal is to find the best way to deploy a Steam Server with some games on it.
+This script automate game server installation, map, mod installation and launch process. You can manage mods and maps selection in the .yml file in /confs directoru. This script is developped for a school project.
 
 ## Usage
 
-* check conf.yaml to configure your stuff
-* python arma3.py install // for installing server, map and mod
-* python arma3.py uninstall // to uninstall the server
-* python arma3.py start // to start the server
-* python arma3.py stop // to stop the server
+* First run pip install -r requirements.txt // to download dependencies
+* modify your_game.yaml // to customise your game server
+* python arma3.py install your_game.yaml// for installing server, map and mod
+* python arma3.py uninstall your_game.yaml // to uninstall the server
+* python arma3.py start your_game.yaml// to start the server
+* python arma3.py stop your_game.yaml// to stop the server
 
-## CHANGELOG CURRENT 0.7
+## CHANGELOG CURRENT 0.8
 
+*   V0.8 : Implementing public ip show in start.py, system check, modify code to add your_game.yaml as a variable for further customisation, changing name of the script
 *   V0.7 : Implementing custom start, stop function
 *   V0.6 : Implementing mod installation, conf.cfg auto generation
 *   V0.5 : Reorganising code, implementing map downloading, renaming project
