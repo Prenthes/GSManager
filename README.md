@@ -5,14 +5,15 @@ This script automate game server installation, map, mod installation and launch 
 ## Usage
 
 * First run pip install -r requirements.txt // to download dependencies
-* modify your_game.yaml // to customise your game server
-* python arma3.py install your_game.yaml// for installing server, map and mod
-* python arma3.py uninstall your_game.yaml // to uninstall the server
-* python arma3.py start your_game.yaml// to start the server
-* python arma3.py stop your_game.yaml// to stop the server
+* modify your_game.yml // to customise your game server
+* python GSManager.py install your_game.yml // for installing server, map and mod
+* python arma3.py uninstall your_game.yml // to uninstall the server
+* python arma3.py start your_game.yml // to start the server
+* python arma3.py stop your_game.yml // to stop the server
 
 ## CHANGELOG CURRENT 0.8
 
+*   V0.85 : Optimizing script
 *   V0.8 : Implementing public ip show in start.py, system check, modify code to add your_game.yaml as a variable for further customisation, changing name of the script
 *   V0.7 : Implementing custom start, stop function
 *   V0.6 : Implementing mod installation, conf.cfg auto generation

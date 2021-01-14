@@ -7,11 +7,8 @@ import wget
 from pysteamcmdwrapper import SteamCMD
 from inc.sys_check import req_check
 
-def install():
+def install(yaml_conf_content):
     
-    yaml_conf_file = open(sys.argv[2], 'r')
-    yaml_conf_content = yaml.safe_load(yaml_conf_file)
-
     LOGIN = yaml_conf_content['steamCMD']['login']
     PWD = yaml_conf_content['steamCMD']['password']
     SERVER_DIR = yaml_conf_content['game']['game_dir']

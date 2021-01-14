@@ -5,14 +5,10 @@ import yaml
 from pysteamcmdwrapper import SteamCMD
 from requests import get
 
-yaml_conf_file = open(sys.argv[2], 'r')
-yaml_conf_content = yaml.safe_load(yaml_conf_file)
-
-SERVER_DIR = yaml_conf_content['game']['game_dir']
-
-def start():
+def start(yaml_conf_content):
 
     # LAUNCHING GAME
+    SERVER_DIR = yaml_conf_content['game']['game_dir']
     root = str(os.getcwd())
     PORT = str(yaml_conf_content['game']['game_firewall'])
     CONF = str("-config=conf.cfg")

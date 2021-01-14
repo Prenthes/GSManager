@@ -2,14 +2,18 @@ import os
 import sys
 import yaml
 from pysteamcmdwrapper import SteamCMD
+from inc.GSMYml import read_conf
 from inc.install import install
 from inc.start import start
 from inc.uninstall import uninstall
 from inc.stop import stop
 from inc.sys_check import req_check
 
-yaml_conf_file = open(sys.argv[2], 'r')
-yaml_conf_content = yaml.safe_load(yaml_conf_file)
+function = sys.argv[1]
+conf = sys.argv[2]
+yaml_conf_content = read_conf(conf)
+
+#TEST DES VARIABLES SI CONF EXISTE POURSUITE DU TEST
 
 STEAMCMD_DIR = yaml_conf_content['steamCMD']['steamCMD_dir']
 SERVER_DIR = yaml_conf_content['game']['game_dir']
@@ -39,16 +43,13 @@ except:
 
 # MAIN SCRIPT
 
-function = sys.argv[1]
-conf = sys.argv[2]
-
 if function == "install":
-    install()
+    install(yaml_conf_content)
 elif function == "uninstall":
-    uninstall()
+    uninstall(STEAMCMD_DIR, SERVER_DIR)
 elif function == "start":
-    start()
+    start(yaml_conf_content)
 elif function == "stop":
-    stop()
+    stop(yaml_conf_content)
 else:
     print('Function unavalable, check documentation for further notice')

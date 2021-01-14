@@ -3,15 +3,8 @@ import sys
 import yaml
 import shutil
 
+def uninstall(STEAMCMD_DIR, SERVER_DIR):
 
-
-def uninstall():
-
-    yaml_conf_file = open(sys.argv[2], 'r')
-    yaml_conf_content = yaml.safe_load(yaml_conf_file)
-    
-    STEAMCMD_DIR = yaml_conf_content['steamCMD']['steamCMD_dir']
-    SERVER_DIR = yaml_conf_content['game']['game_dir']
     try:
         shutil.rmtree(STEAMCMD_DIR)
         print("SteamCMD Directory is deleted")
