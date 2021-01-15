@@ -5,7 +5,8 @@ steamCMD:
 game:
       game_id: 233780
       game_dir: arma_server
-      game_firewall: 2302
+      game_exe: arma3server.exe
+      game_port: 2302
       game_mods:
         cba3: 450814997
         task_force_radio: 620019431        

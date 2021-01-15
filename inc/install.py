@@ -7,18 +7,17 @@ import wget
 from pysteamcmdwrapper import SteamCMD
 from inc.sys_check import req_check
 
-def install(yaml_conf_content):
+def install(LOGIN, PWD, SERVER_DIR,WORKSHOP_DIR,MOD_DIR,GAME_ID,STEAMCMD_DIR, MAPS, MODS):
     
-    LOGIN = yaml_conf_content['steamCMD']['login']
-    PWD = yaml_conf_content['steamCMD']['password']
-    SERVER_DIR = yaml_conf_content['game']['game_dir']
-    WORKSHOP_DIR = os.path.join(os.getcwd(),SERVER_DIR,"armamods","steamapps","workshop","content","107410")
-    MOD_DIR = os.path.join(os.getcwd(),SERVER_DIR)
-    GAME_ID = yaml_conf_content['game']['game_id']
-    STEAMCMD_DIR = yaml_conf_content['steamCMD']['steamCMD_dir']
-
     #SYSTEM CHECK
     req_check()
+
+    #CREATE GAME DIRECTORY
+    try:
+        os.mkdir(SERVER_DIR)
+        print('Creating game folder')    
+    except:
+        print('Game folder exist')
 
     #DOWNLOAD AND INSTALL GAME
     try:
@@ -28,10 +27,8 @@ def install(yaml_conf_content):
     except:
         print('Game server installation error')
 
-
     # MAP INSTALLER
 
-    MAPS = yaml_conf_content['game']['game_maps']
     MPMISSIONS = os.path.join(os.getcwd(),SERVER_DIR,'mpmissions')
 
     try:
@@ -44,8 +41,6 @@ def install(yaml_conf_content):
 
     # MOD INSTALLER
 
-    MODS = yaml_conf_content['game']['game_mods']
-    
     try:
         for mod, mod_id in MODS.items():
             s.workshop_update(107410,mod_id,os.path.join(os.getcwd(),MOD_DIR),validate=True)
@@ -57,7 +52,7 @@ def install(yaml_conf_content):
         conf_cfg = open("conf.cfg", "w+")
         yaml_conf = yaml_conf_content['conf']
 
-        conf_cfg.write('// Generated with Arma 3 Antistasi Python script \n')
+        conf_cfg.write('// Generated with GSManager Python script \n')
 
         for name, conf in yaml_conf.items():
             nameline = str(name)

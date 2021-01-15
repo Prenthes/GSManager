@@ -1,18 +1,19 @@
 # Game Server Manager Python
 
-This script automate game server installation, map, mod installation and launch process. You can manage mods and maps selection in the .yml file in /confs directoru. This script is developped for a school project.
+This script automate game server installation, map, mod installation and launch process. You can manage mods and maps selection in the .yml file in /confs directory. This script is developped for a python school project.
 
 ## Usage
 
 * First run pip install -r requirements.txt // to download dependencies
 * modify your_game.yml // to customise your game server
 * python GSManager.py install your_game.yml // for installing server, map and mod
-* python arma3.py uninstall your_game.yml // to uninstall the server
-* python arma3.py start your_game.yml // to start the server
-* python arma3.py stop your_game.yml // to stop the server
+* python GSManager.py uninstall your_game.yml // to uninstall the server
+* python GSManager.py start your_game.yml // to start the server
+* python GSManager.py stop your_game.yml // to stop the server
 
 ## CHANGELOG CURRENT 0.8
 
+*   V0.9 : Debugging + minor update
 *   V0.85 : Optimizing script
 *   V0.8 : Implementing public ip show in start.py, system check, modify code to add your_game.yaml as a variable for further customisation, changing name of the script
 *   V0.7 : Implementing custom start, stop function

@@ -12,8 +12,6 @@ def req_check():
 
     print('/////////////////// SYSTEM RECQUIREMENT CHECK ///////////////////')
 
-    sys_check = 0
-
     # CHECKING MEMORY
 
     total_memory = virtual_memory()

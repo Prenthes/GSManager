@@ -1,12 +1,8 @@
 import os
-import subprocess
-import yaml
-import shutil
-import wget
-from pysteamcmdwrapper import SteamCMD
 
-def stop():
+def stop(GAME_EXE):
+    CMD = str("taskkill /F /IM ") + str(GAME_EXE)
     try:
-        os.system("taskkill /F /IM arma3server.exe")
+        os.system(CMD)
     except:
-        print("Le serveur n'est pas lancé")
+       print("Le serveur n'est pas lancé")
