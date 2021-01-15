@@ -1,4 +1,5 @@
 import yaml
+import os
 
 def read_conf(file):
     yaml_conf_file = open(file, 'r')
